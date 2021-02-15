@@ -15,7 +15,7 @@ $(document).ready(function () {
   });
 });
 
-// get status API local host 124.0.0.1
+// get status API local host 127.0.0.1
 $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
   if (`${data.status}` === 'OK') {
     $('#api_status').addClass('available');
