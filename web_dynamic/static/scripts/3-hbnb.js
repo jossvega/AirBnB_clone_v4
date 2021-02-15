@@ -26,8 +26,8 @@ $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
 
 $.ajax({
   type: 'POST',
-  url: 'http://0.0.0.0:5001/api/v1/places_search',
-  data: '{}',
+  url: 'http://127.0.0.1:5001/api/v1/places_search',
+  data: JSON.stringify({}),
   ContentType: 'application/json',
   dataType: 'json',
   success: function (data) {
@@ -40,16 +40,16 @@ $.ajax({
             </div>
             <div class="information">
               <div class="max_guest">${place.max_guest} Guests</div>
-                    <div class="number_rooms">${place.number_rooms}Bedrooms</div>
-                    <div class="number_bathrooms">${place.number_bathrooms} Bathrooms</div>
+              <div class="number_rooms">${place.number_rooms}Bedrooms</div>
+              <div class="number_bathrooms">${place.number_bathrooms} Bathrooms</div>
             </div>
             <div class="user">
-                    <b>Owner:</b> ${place.user.first_name} ${place.user.last_name}
-                  </div>
-                  <div class="description">
-                    ${place.description}
-                  </div>
-          </article>`;
+              <b>Owner:</b>
+            </div>
+            <div class="description">
+              ${place.description}
+            </div>
+          </article>`
       })
     );
   }
