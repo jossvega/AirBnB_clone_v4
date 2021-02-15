@@ -11,7 +11,7 @@ $(document).ready(function () {
       item.id = $(this).attr('data-id');
       delete myArray[item.id];
     }
-    $('div.amenities h4').text(Object.values(myArray).join(', '));
+    /*$('div.amenities h4').text(Object.values(myArray).join(', '));
     $('.filters h4').css({
       display: 'inline-block',
       width: '200px',
@@ -19,6 +19,6 @@ $(document).ready(function () {
       'white-space': 'nowrap',
       overflow: 'hidden',
       'text-overflow': 'ellipsis'
-    });
+    });*/
   });
 });
